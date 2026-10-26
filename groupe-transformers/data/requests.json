@@ -1,0 +1,556 @@
+[
+ {
+  "request_id": "R001",
+  "employe": "E01",
+  "email": "e01@example.com",
+  "texte": "Déjeuner avec un client au restaurant le 12/10/2026 : 34,50 € TTC.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 34.5,
+   "devise": "EUR",
+   "categorie": "repas",
+   "date": "2026-10-12",
+   "motif": "Déjeuner client"
+  }
+ },
+ {
+  "request_id": "R002",
+  "employe": "E02",
+  "email": "e02@example.com",
+  "texte": "Billet de train Paris-Lyon aller-retour pour le salon Industrie, payé 118 € le 5 octobre 2026.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 118,
+   "devise": "EUR",
+   "categorie": "transport",
+   "date": "2026-10-05",
+   "motif": "Train Paris-Lyon pour le salon Industrie"
+  }
+ },
+ {
+  "request_id": "R003",
+  "employe": "E03",
+  "email": "e03@example.com",
+  "texte": "Nuit d'hôtel à Lille le 28/09/2026 pour l'audit fournisseur, facture de 96,00 euros.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 96,
+   "devise": "EUR",
+   "categorie": "hebergement",
+   "date": "2026-09-28",
+   "motif": "Hôtel à Lille pour l'audit fournisseur"
+  }
+ },
+ {
+  "request_id": "R004",
+  "employe": "E04",
+  "email": "e04@example.com",
+  "texte": "Achat d'un clavier et d'une souris pour le poste de travail, 79,90 € le 2026-10-01.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 79.9,
+   "devise": "EUR",
+   "categorie": "materiel",
+   "date": "2026-10-01",
+   "motif": "Clavier et souris"
+  }
+ },
+ {
+  "request_id": "R005",
+  "employe": "E05",
+  "email": "e05@example.com",
+  "texte": "Taxi from JFK airport to the office on 2026-09-15, 62.40 USD.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 62.4,
+   "devise": "USD",
+   "categorie": "transport",
+   "date": "2026-09-15",
+   "motif": "Taxi aéroport JFK - bureau"
+  }
+ },
+ {
+  "request_id": "R006",
+  "employe": "E06",
+  "email": "e06@example.com",
+  "texte": "Repas d'équipe pour la fin du sprint, 38 € le 16 octobre 2026.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 38,
+   "devise": "EUR",
+   "categorie": "repas",
+   "date": "2026-10-16",
+   "motif": "Repas d'équipe fin de sprint"
+  }
+ },
+ {
+  "request_id": "R007",
+  "employe": "E07",
+  "email": "e07@example.com",
+  "texte": "Plein d'essence pour la visite chantier à Rouen le 03/10/2026 : 71,25 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 71.25,
+   "devise": "EUR",
+   "categorie": "transport",
+   "date": "2026-10-03",
+   "motif": "Essence visite chantier Rouen"
+  }
+ },
+ {
+  "request_id": "R008",
+  "employe": "E08",
+  "email": "e08@example.com",
+  "texte": "Hotel in London on 22/09/2026 for the partner workshop: 150 GBP.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 150,
+   "devise": "GBP",
+   "categorie": "hebergement",
+   "date": "2026-09-22",
+   "motif": "Hôtel à Londres pour l'atelier partenaire"
+  }
+ },
+ {
+  "request_id": "R009",
+  "employe": "E09",
+  "email": "e09@example.com",
+  "texte": "Frais d'inscription à la conférence DevDays du 08/10/2026, 85 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 85,
+   "devise": "EUR",
+   "categorie": "autre",
+   "date": "2026-10-08",
+   "motif": "Inscription conférence DevDays"
+  }
+ },
+ {
+  "request_id": "R010",
+  "employe": "E10",
+  "email": "e10@example.com",
+  "texte": "Dîner à Genève avec le partenaire le 30.09.2026, montant 36 CHF.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 36,
+   "devise": "CHF",
+   "categorie": "repas",
+   "date": "2026-09-30",
+   "motif": "Dîner partenaire à Genève"
+  }
+ },
+ {
+  "request_id": "R011",
+  "employe": "E11",
+  "email": "e11@example.com",
+  "texte": "Ticket de parking aéroport du 14/10/2026, 24 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 24,
+   "devise": "EUR",
+   "categorie": "transport",
+   "date": "2026-10-14",
+   "motif": "Parking aéroport"
+  }
+ },
+ {
+  "request_id": "R012",
+  "employe": "E12",
+  "email": "e12@example.com",
+  "texte": "Câble HDMI et adaptateur USB-C achetés le 9 octobre 2026 pour la salle de réunion : 32,99 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 32.99,
+   "devise": "EUR",
+   "categorie": "materiel",
+   "date": "2026-10-09",
+   "motif": "Câble HDMI et adaptateur USB-C"
+  }
+ },
+ {
+  "request_id": "R013",
+  "employe": "E01",
+  "email": "e01@example.com",
+  "texte": "Vol Paris-Toulouse le 21/09/2026 pour la réunion projet, 189 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 189,
+   "devise": "EUR",
+   "categorie": "transport",
+   "date": "2026-09-21",
+   "motif": "Vol Paris-Toulouse réunion projet"
+  }
+ },
+ {
+  "request_id": "R014",
+  "employe": "E02",
+  "email": "e02@example.com",
+  "texte": "Petit-déjeuner de travail le 19/10/2026, 18,60 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 18.6,
+   "devise": "EUR",
+   "categorie": "repas",
+   "date": "2026-10-19",
+   "motif": "Petit-déjeuner de travail"
+  }
+ },
+ {
+  "request_id": "R015",
+  "employe": "E03",
+  "email": "e03@example.com",
+  "texte": "Abonnement mensuel à un outil de visioconférence, 29 € prélevés le 01/10/2026.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 29,
+   "devise": "EUR",
+   "categorie": "autre",
+   "date": "2026-10-01",
+   "motif": "Abonnement visioconférence"
+  }
+ },
+ {
+  "request_id": "R016",
+  "employe": "E04",
+  "email": "e04@example.com",
+  "texte": "Deux nuits d'hôtel à Nantes, départ le 07/10/2026, total 172 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 172,
+   "devise": "EUR",
+   "categorie": "hebergement",
+   "date": "2026-10-07",
+   "motif": "Deux nuits d'hôtel à Nantes"
+  }
+ },
+ {
+  "request_id": "R017",
+  "employe": "E05",
+  "email": "e05@example.com",
+  "texte": "Business lunch in Boston on 2026-09-16, 41.80 USD.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 41.8,
+   "devise": "USD",
+   "categorie": "repas",
+   "date": "2026-09-16",
+   "motif": "Déjeuner d'affaires à Boston"
+  }
+ },
+ {
+  "request_id": "R018",
+  "employe": "E06",
+  "email": "e06@example.com",
+  "texte": "Forfait Navigo hebdomadaire du 13/10/2026 : 30,75 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 30.75,
+   "devise": "EUR",
+   "categorie": "transport",
+   "date": "2026-10-13",
+   "motif": "Navigo hebdomadaire"
+  }
+ },
+ {
+  "request_id": "R019",
+  "employe": "E07",
+  "email": "e07@example.com",
+  "texte": "Casque audio pour les appels clients acheté le 25/09/2026 : 129 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 129,
+   "devise": "EUR",
+   "categorie": "materiel",
+   "date": "2026-09-25",
+   "motif": "Casque audio"
+  }
+ },
+ {
+  "request_id": "R020",
+  "employe": "E08",
+  "email": "e08@example.com",
+  "texte": "Déjeuner pendant la formation le 06/10/2026, 22,40 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 22.4,
+   "devise": "EUR",
+   "categorie": "repas",
+   "date": "2026-10-06",
+   "motif": "Déjeuner formation"
+  }
+ },
+ {
+  "request_id": "R021",
+  "employe": "E09",
+  "email": "e09@example.com",
+  "texte": "Location de voiture pour le déplacement à Bordeaux, 2 jours, 146 € le 29/09/2026.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 146,
+   "devise": "EUR",
+   "categorie": "transport",
+   "date": "2026-09-29",
+   "motif": "Location de voiture Bordeaux"
+  }
+ },
+ {
+  "request_id": "R022",
+  "employe": "E10",
+  "email": "e10@example.com",
+  "texte": "Achat de livres techniques pour l'équipe le 11/10/2026, 64,30 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 64.3,
+   "devise": "EUR",
+   "categorie": "autre",
+   "date": "2026-10-11",
+   "motif": "Livres techniques"
+  }
+ },
+ {
+  "request_id": "R023",
+  "employe": "E11",
+  "email": "e11@example.com",
+  "texte": "Nuit à l'hôtel près de la gare de Strasbourg le 15/10/2026, 89 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 89,
+   "devise": "EUR",
+   "categorie": "hebergement",
+   "date": "2026-10-15",
+   "motif": "Hôtel à Strasbourg"
+  }
+ },
+ {
+  "request_id": "R024",
+  "employe": "E12",
+  "email": "e12@example.com",
+  "texte": "Repas pris sur la route lors du déplacement du 17/10/2026, 15,90 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 15.9,
+   "devise": "EUR",
+   "categorie": "repas",
+   "date": "2026-10-17",
+   "motif": "Repas en déplacement"
+  }
+ },
+ {
+  "request_id": "R025",
+  "employe": "E01",
+  "email": "e01@example.com",
+  "texte": "Disque SSD externe de 1 To pour les sauvegardes, 99 € le 04/10/2026.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 99,
+   "devise": "EUR",
+   "categorie": "materiel",
+   "date": "2026-10-04",
+   "motif": "Disque SSD externe"
+  }
+ },
+ {
+  "request_id": "R026",
+  "employe": "E02",
+  "email": "e02@example.com",
+  "texte": "Tickets de métro et de bus à Bruxelles pendant la mission du 24/09/2026, 18 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 18,
+   "devise": "EUR",
+   "categorie": "transport",
+   "date": "2026-09-24",
+   "motif": "Transports en commun à Bruxelles"
+  }
+ },
+ {
+  "request_id": "R027",
+  "employe": "E03",
+  "email": "e03@example.com",
+  "texte": "Dîner client le 10/10/2026 au restaurant, 39,00 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 39,
+   "devise": "EUR",
+   "categorie": "repas",
+   "date": "2026-10-10",
+   "motif": "Dîner client"
+  }
+ },
+ {
+  "request_id": "R028",
+  "employe": "E04",
+  "email": "e04@example.com",
+  "texte": "Péage autoroute A13 aller-retour le 02/10/2026, 27,60 €.",
+  "scenario": "nominal",
+  "attendu": {
+   "montant": 27.6,
+   "devise": "EUR",
+   "categorie": "transport",
+   "date": "2026-10-02",
+   "motif": "Péage A13"
+  }
+ },
+ {
+  "request_id": "R029",
+  "employe": "E05",
+  "email": "e05@example.com",
+  "texte": "Dîner de gala avec trois clients le 09/10/2026, addition de 212 €.",
+  "scenario": "plafond",
+  "attendu": {
+   "montant": 212,
+   "devise": "EUR",
+   "categorie": "repas",
+   "date": "2026-10-09",
+   "motif": "Dîner de gala clients"
+  }
+ },
+ {
+  "request_id": "R030",
+  "employe": "E06",
+  "email": "e06@example.com",
+  "texte": "Achat d'un ordinateur portable le 18/09/2026 pour un nouvel arrivant : 1249 €.",
+  "scenario": "plafond",
+  "attendu": {
+   "montant": 1249,
+   "devise": "EUR",
+   "categorie": "materiel",
+   "date": "2026-09-18",
+   "motif": "Ordinateur portable"
+  }
+ },
+ {
+  "request_id": "R031",
+  "employe": "E07",
+  "email": "e07@example.com",
+  "texte": "Suite à l'hôtel à Cannes le 26/09/2026 pendant le salon, 420 €.",
+  "scenario": "plafond",
+  "attendu": {
+   "montant": 420,
+   "devise": "EUR",
+   "categorie": "hebergement",
+   "date": "2026-09-26",
+   "motif": "Hôtel à Cannes pendant le salon"
+  }
+ },
+ {
+  "request_id": "R032",
+  "employe": "E08",
+  "email": "e08@example.com",
+  "texte": "Business class flight New York - Paris on 2026-10-02, 2350.00 USD.",
+  "scenario": "plafond",
+  "attendu": {
+   "montant": 2350,
+   "devise": "USD",
+   "categorie": "transport",
+   "date": "2026-10-02",
+   "motif": "Vol New York - Paris en classe affaires"
+  }
+ },
+ {
+  "request_id": "R033",
+  "employe": "E09",
+  "email": "e09@example.com",
+  "texte": "Billet de train réservé pour le séminaire du 15/11/2026, 74 €.",
+  "scenario": "date_future",
+  "attendu": {
+   "montant": 74,
+   "devise": "EUR",
+   "categorie": "transport",
+   "date": "2026-11-15",
+   "motif": "Train pour le séminaire"
+  }
+ },
+ {
+  "request_id": "R034",
+  "employe": "E10",
+  "email": "e10@example.com",
+  "texte": "Déjeuner d'équipe du 12/05/2026 oublié dans la note précédente, 27 €.",
+  "scenario": "date_ancienne",
+  "attendu": {
+   "montant": 27,
+   "devise": "EUR",
+   "categorie": "repas",
+   "date": "2026-05-12",
+   "motif": "Déjeuner d'équipe"
+  }
+ },
+ {
+  "request_id": "R035",
+  "employe": "E02",
+  "email": "e02@example.com",
+  "texte": "Train Paris-Lyon A/R pour le salon Industrie le 05/10/2026, 118,00 €.",
+  "scenario": "doublon_metier",
+  "attendu": {
+   "montant": 118,
+   "devise": "EUR",
+   "categorie": "transport",
+   "date": "2026-10-05",
+   "motif": "Train Paris-Lyon salon Industrie"
+  }
+ },
+ {
+  "request_id": "R036",
+  "employe": "E11",
+  "email": "e11@example.com",
+  "texte": "Parking de l'aéroport, 24 euros, le 14 octobre 2026.",
+  "scenario": "doublon_metier",
+  "attendu": {
+   "montant": 24,
+   "devise": "EUR",
+   "categorie": "transport",
+   "date": "2026-10-14",
+   "motif": "Parking aéroport"
+  }
+ },
+ {
+  "request_id": "R037",
+  "employe": "E13",
+  "email": "e13@compta.invalid",
+  "texte": "Déjeuner avec un prospect le 08/10/2026, 31,20 €.",
+  "scenario": "email_invalide",
+  "attendu": {
+   "montant": 31.2,
+   "devise": "EUR",
+   "categorie": "repas",
+   "date": "2026-10-08",
+   "motif": "Déjeuner prospect"
+  }
+ },
+ {
+  "request_id": "R038",
+  "employe": "E14",
+  "email": "e14@rh.invalid",
+  "texte": "Billet de train Lyon-Grenoble du 13/10/2026, 23 €.",
+  "scenario": "email_invalide",
+  "attendu": {
+   "montant": 23,
+   "devise": "EUR",
+   "categorie": "transport",
+   "date": "2026-10-13",
+   "motif": "Train Lyon-Grenoble"
+  }
+ },
+ {
+  "request_id": "R039",
+  "employe": "E15",
+  "email": "e15@ventes.invalid",
+  "texte": "Fournitures de bureau (carnets, stylos) achetées le 30/09/2026, 21,45 €.",
+  "scenario": "email_invalide",
+  "attendu": {
+   "montant": 21.45,
+   "devise": "EUR",
+   "categorie": "materiel",
+   "date": "2026-09-30",
+   "motif": "Fournitures de bureau"
+  }
+ },
+ {
+  "request_id": "R040",
+  "employe": "E12",
+  "email": "e12@example.com",
+  "texte": "   ",
+  "scenario": "vide",
+  "attendu": null
+ }
+]

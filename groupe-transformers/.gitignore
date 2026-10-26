@@ -24,3 +24,10 @@ models/
 *.safetensors
 *.gguf
 *.onnx
+
+# Projet B5 : bases et journaux des runs (régénérables), métadonnées de build
+runs/
+*.db
+*.db-wal
+*.db-shm
+*.egg-info/
