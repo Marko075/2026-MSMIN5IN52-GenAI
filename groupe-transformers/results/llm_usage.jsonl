@@ -1,0 +1,11 @@
+{"ts": 1793031083.1813512, "model": "qwen/qwen3.8-flash", "request_id": "CHECK", "ok": true, "latency_s": 2.7, "prompt_tokens": 262, "completion_tokens": 134}
+{"ts": 1793031120.48642, "model": "qwen/qwen3.8-flash", "request_id": "R034", "ok": true, "latency_s": 3.35, "prompt_tokens": 266, "completion_tokens": 156}
+{"ts": 1793031128.0529926, "model": "qwen/qwen3.8-flash", "request_id": "R010", "ok": true, "latency_s": 4.74, "prompt_tokens": 265, "completion_tokens": 156}
+{"ts": 1793031131.8673766, "model": "qwen/qwen3.8-flash", "request_id": "R005", "ok": true, "latency_s": 3.76, "prompt_tokens": 268, "completion_tokens": 178}
+{"ts": 1793031137.4607956, "model": "qwen/qwen3.8-flash", "request_id": "R017", "ok": true, "latency_s": 5.54, "prompt_tokens": 264, "completion_tokens": 258}
+{"ts": 1793031143.820889, "model": "qwen/qwen3.8-flash", "request_id": "R033", "ok": true, "latency_s": 4.03, "prompt_tokens": 266, "completion_tokens": 158}
+{"ts": 1793031152.024298, "model": "qwen/qwen3.8-flash", "request_id": "R001", "ok": true, "latency_s": 8.18, "prompt_tokens": 268, "completion_tokens": 206}
+{"ts": 1793031158.0547423, "model": "qwen/qwen3.8-flash", "request_id": "R037", "ok": true, "latency_s": 4.61, "prompt_tokens": 264, "completion_tokens": 233}
+{"ts": 1793031163.556509, "model": "qwen/qwen3.8-flash", "request_id": "R029", "ok": true, "latency_s": 5.46, "prompt_tokens": 266, "completion_tokens": 162}
+{"ts": 1793031166.4152722, "model": "qwen/qwen3.8-flash", "request_id": "R008", "ok": true, "latency_s": 2.83, "prompt_tokens": 265, "completion_tokens": 146}
+{"ts": 1793031170.8958793, "model": "qwen/qwen3.8-flash", "request_id": "R021", "ok": true, "latency_s": 4.44, "prompt_tokens": 270, "completion_tokens": 180}

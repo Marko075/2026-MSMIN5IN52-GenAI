@@ -1,0 +1,296 @@
+{
+  "summary": {
+    "model": "qwen/qwen3.8-flash",
+    "requests": 10,
+    "real_llm_calls": 10,
+    "llm_cache_hits": 1,
+    "crashes": 1,
+    "duplicate_effects": 0,
+    "statuses": {
+      "REJECTED": 3,
+      "DONE": 6,
+      "COMPENSATED": 1
+    },
+    "field_accuracy": {
+      "montant": 1.0,
+      "devise": 1.0,
+      "categorie": 1.0,
+      "date": 1.0
+    },
+    "exact_match_rate": 1.0,
+    "budget_used_total": 11,
+    "budget_max": 150
+  },
+  "rows": [
+    {
+      "request_id": "R001",
+      "scenario": "nominal",
+      "texte": "Déjeuner avec un client au restaurant le 12/10/2026 : 34,50 € TTC.",
+      "attendu": {
+        "montant": 34.5,
+        "devise": "EUR",
+        "categorie": "repas",
+        "date": "2026-10-12",
+        "motif": "Déjeuner client"
+      },
+      "obtenu": {
+        "montant": 34.5,
+        "devise": "EUR",
+        "categorie": "repas",
+        "date": "2026-10-12",
+        "motif": "Déjeuner client au restaurant"
+      },
+      "champs_corrects": {
+        "montant": true,
+        "devise": true,
+        "categorie": true,
+        "date": true
+      },
+      "statut": "DONE",
+      "raison": null
+    },
+    {
+      "request_id": "R005",
+      "scenario": "nominal",
+      "texte": "Taxi from JFK airport to the office on 2026-09-15, 62.40 USD.",
+      "attendu": {
+        "montant": 62.4,
+        "devise": "USD",
+        "categorie": "transport",
+        "date": "2026-09-15",
+        "motif": "Taxi aéroport JFK - bureau"
+      },
+      "obtenu": {
+        "montant": 62.4,
+        "devise": "USD",
+        "categorie": "transport",
+        "date": "2026-09-15",
+        "motif": "Trajet en taxi de l'aéroport JFK au bureau"
+      },
+      "champs_corrects": {
+        "montant": true,
+        "devise": true,
+        "categorie": true,
+        "date": true
+      },
+      "statut": "DONE",
+      "raison": null
+    },
+    {
+      "request_id": "R008",
+      "scenario": "nominal",
+      "texte": "Hotel in London on 22/09/2026 for the partner workshop: 150 GBP.",
+      "attendu": {
+        "montant": 150,
+        "devise": "GBP",
+        "categorie": "hebergement",
+        "date": "2026-09-22",
+        "motif": "Hôtel à Londres pour l'atelier partenaire"
+      },
+      "obtenu": {
+        "montant": 150.0,
+        "devise": "GBP",
+        "categorie": "hebergement",
+        "date": "2026-09-22",
+        "motif": "Hôtel à Londres pour atelier partenaire"
+      },
+      "champs_corrects": {
+        "montant": true,
+        "devise": true,
+        "categorie": true,
+        "date": true
+      },
+      "statut": "DONE",
+      "raison": null
+    },
+    {
+      "request_id": "R010",
+      "scenario": "nominal",
+      "texte": "Dîner à Genève avec le partenaire le 30.09.2026, montant 36 CHF.",
+      "attendu": {
+        "montant": 36,
+        "devise": "CHF",
+        "categorie": "repas",
+        "date": "2026-09-30",
+        "motif": "Dîner partenaire à Genève"
+      },
+      "obtenu": {
+        "montant": 36.0,
+        "devise": "CHF",
+        "categorie": "repas",
+        "date": "2026-09-30",
+        "motif": "Dîner avec le partenaire à Genève"
+      },
+      "champs_corrects": {
+        "montant": true,
+        "devise": true,
+        "categorie": true,
+        "date": true
+      },
+      "statut": "DONE",
+      "raison": null
+    },
+    {
+      "request_id": "R017",
+      "scenario": "nominal",
+      "texte": "Business lunch in Boston on 2026-09-16, 41.80 USD.",
+      "attendu": {
+        "montant": 41.8,
+        "devise": "USD",
+        "categorie": "repas",
+        "date": "2026-09-16",
+        "motif": "Déjeuner d'affaires à Boston"
+      },
+      "obtenu": {
+        "montant": 41.8,
+        "devise": "USD",
+        "categorie": "repas",
+        "date": "2026-09-16",
+        "motif": "Déjeuner d'affaires à Boston"
+      },
+      "champs_corrects": {
+        "montant": true,
+        "devise": true,
+        "categorie": true,
+        "date": true
+      },
+      "statut": "DONE",
+      "raison": null
+    },
+    {
+      "request_id": "R021",
+      "scenario": "nominal",
+      "texte": "Location de voiture pour le déplacement à Bordeaux, 2 jours, 146 € le 29/09/2026.",
+      "attendu": {
+        "montant": 146,
+        "devise": "EUR",
+        "categorie": "transport",
+        "date": "2026-09-29",
+        "motif": "Location de voiture Bordeaux"
+      },
+      "obtenu": {
+        "montant": 146.0,
+        "devise": "EUR",
+        "categorie": "transport",
+        "date": "2026-09-29",
+        "motif": "Location de voiture pour déplacement à Bordeaux"
+      },
+      "champs_corrects": {
+        "montant": true,
+        "devise": true,
+        "categorie": true,
+        "date": true
+      },
+      "statut": "DONE",
+      "raison": null
+    },
+    {
+      "request_id": "R029",
+      "scenario": "plafond",
+      "texte": "Dîner de gala avec trois clients le 09/10/2026, addition de 212 €.",
+      "attendu": {
+        "montant": 212,
+        "devise": "EUR",
+        "categorie": "repas",
+        "date": "2026-10-09",
+        "motif": "Dîner de gala clients"
+      },
+      "obtenu": {
+        "montant": 212.0,
+        "devise": "EUR",
+        "categorie": "repas",
+        "date": "2026-10-09",
+        "motif": "Dîner de gala avec clients"
+      },
+      "champs_corrects": {
+        "montant": true,
+        "devise": true,
+        "categorie": true,
+        "date": true
+      },
+      "statut": "REJECTED",
+      "raison": "plafond repas dépassé (212.00 € > 40 €)"
+    },
+    {
+      "request_id": "R033",
+      "scenario": "date_future",
+      "texte": "Billet de train réservé pour le séminaire du 15/11/2026, 74 €.",
+      "attendu": {
+        "montant": 74,
+        "devise": "EUR",
+        "categorie": "transport",
+        "date": "2026-11-15",
+        "motif": "Train pour le séminaire"
+      },
+      "obtenu": {
+        "montant": 74.0,
+        "devise": "EUR",
+        "categorie": "transport",
+        "date": "2026-11-15",
+        "motif": "Billet de train pour séminaire"
+      },
+      "champs_corrects": {
+        "montant": true,
+        "devise": true,
+        "categorie": true,
+        "date": true
+      },
+      "statut": "REJECTED",
+      "raison": "date future (2026-11-15)"
+    },
+    {
+      "request_id": "R034",
+      "scenario": "date_ancienne",
+      "texte": "Déjeuner d'équipe du 12/05/2026 oublié dans la note précédente, 27 €.",
+      "attendu": {
+        "montant": 27,
+        "devise": "EUR",
+        "categorie": "repas",
+        "date": "2026-05-12",
+        "motif": "Déjeuner d'équipe"
+      },
+      "obtenu": {
+        "montant": 27.0,
+        "devise": "EUR",
+        "categorie": "repas",
+        "date": "2026-05-12",
+        "motif": "Déjeuner d'équipe"
+      },
+      "champs_corrects": {
+        "montant": true,
+        "devise": true,
+        "categorie": true,
+        "date": true
+      },
+      "statut": "REJECTED",
+      "raison": "dépense de plus de 90 jours (2026-05-12)"
+    },
+    {
+      "request_id": "R037",
+      "scenario": "email_invalide",
+      "texte": "Déjeuner avec un prospect le 08/10/2026, 31,20 €.",
+      "attendu": {
+        "montant": 31.2,
+        "devise": "EUR",
+        "categorie": "repas",
+        "date": "2026-10-08",
+        "motif": "Déjeuner prospect"
+      },
+      "obtenu": {
+        "montant": 31.2,
+        "devise": "EUR",
+        "categorie": "repas",
+        "date": "2026-10-08",
+        "motif": "Déjeuner avec un prospect"
+      },
+      "champs_corrects": {
+        "montant": true,
+        "devise": true,
+        "categorie": true,
+        "date": true
+      },
+      "statut": "COMPENSATED",
+      "raison": "notification impossible : adresse e-mail invalide pour R037"
+    }
+  ]
+}

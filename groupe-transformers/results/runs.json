@@ -1,0 +1,646 @@
+[
+  {
+    "mode": "naive",
+    "run": "naive-seed0",
+    "requests": 40,
+    "messages": 46,
+    "completed": 40,
+    "completion_rate": 1.0,
+    "statuses": {
+      "DONE": 27,
+      "REJECTED": 10,
+      "COMPENSATED": 3
+    },
+    "duplicate_effects": 22,
+    "duplicate_by_kind": {
+      "email": 12,
+      "payment": 9,
+      "refund": 1
+    },
+    "requests_with_duplicates": 14,
+    "inconsistent_requests": 12,
+    "compensations": 3,
+    "payments": 41,
+    "refunds": 4,
+    "emails": 48,
+    "faults": {
+      "worker_kills": 6,
+      "crash_points": 3,
+      "service_faults": 17,
+      "llm_faults": 5,
+      "duplicate_deliveries": 6
+    },
+    "crashes": 9,
+    "faults_total": 37,
+    "retries": 19,
+    "idempotent_replays": 0,
+    "duplicates_ignored": 0,
+    "llm_calls": 58,
+    "llm_cache_hits": 0,
+    "steps_replayed": 48,
+    "recovery_s": {
+      "n": 9,
+      "p50": 0.36689281463623047,
+      "p95": 0.42127251625061035,
+      "mean": 0.3715
+    },
+    "recovery_samples": [
+      0.369,
+      0.3669,
+      0.3503,
+      0.3596,
+      0.3802,
+      0.3958,
+      0.4213,
+      0.3591,
+      0.341
+    ],
+    "duration_s": 11.51,
+    "supervisor": {
+      "status": "finished",
+      "restarts": 9,
+      "elapsed_s": 11.51
+    },
+    "seed": 0
+  },
+  {
+    "mode": "naive",
+    "run": "naive-seed1",
+    "requests": 40,
+    "messages": 46,
+    "completed": 40,
+    "completion_rate": 1.0,
+    "statuses": {
+      "DONE": 29,
+      "COMPENSATED": 2,
+      "REJECTED": 9
+    },
+    "duplicate_effects": 16,
+    "duplicate_by_kind": {
+      "payment": 6,
+      "email": 8,
+      "refund": 2
+    },
+    "requests_with_duplicates": 10,
+    "inconsistent_requests": 7,
+    "compensations": 2,
+    "payments": 38,
+    "refunds": 5,
+    "emails": 44,
+    "faults": {
+      "worker_kills": 8,
+      "crash_points": 5,
+      "service_faults": 16,
+      "llm_faults": 3,
+      "duplicate_deliveries": 6
+    },
+    "crashes": 13,
+    "faults_total": 38,
+    "retries": 17,
+    "idempotent_replays": 0,
+    "duplicates_ignored": 0,
+    "llm_calls": 60,
+    "llm_cache_hits": 0,
+    "steps_replayed": 54,
+    "recovery_s": {
+      "n": 13,
+      "p50": 0.36273694038391113,
+      "p95": 0.3895876407623291,
+      "mean": 0.3589
+    },
+    "recovery_samples": [
+      0.3627,
+      0.3347,
+      0.3106,
+      0.3455,
+      0.3992,
+      0.3696,
+      0.3479,
+      0.3757,
+      0.3677,
+      0.3441,
+      0.3561,
+      0.3896,
+      0.3629
+    ],
+    "duration_s": 12.72,
+    "supervisor": {
+      "status": "finished",
+      "restarts": 13,
+      "elapsed_s": 12.72
+    },
+    "seed": 1
+  },
+  {
+    "mode": "naive",
+    "run": "naive-seed2",
+    "requests": 40,
+    "messages": 46,
+    "completed": 40,
+    "completion_rate": 1.0,
+    "statuses": {
+      "DONE": 29,
+      "REJECTED": 9,
+      "COMPENSATED": 2
+    },
+    "duplicate_effects": 13,
+    "duplicate_by_kind": {
+      "payment": 7,
+      "email": 5,
+      "refund": 1
+    },
+    "requests_with_duplicates": 8,
+    "inconsistent_requests": 7,
+    "compensations": 2,
+    "payments": 40,
+    "refunds": 4,
+    "emails": 41,
+    "faults": {
+      "worker_kills": 6,
+      "crash_points": 9,
+      "service_faults": 16,
+      "llm_faults": 7,
+      "duplicate_deliveries": 6
+    },
+    "crashes": 15,
+    "faults_total": 44,
+    "retries": 18,
+    "idempotent_replays": 0,
+    "duplicates_ignored": 0,
+    "llm_calls": 64,
+    "llm_cache_hits": 0,
+    "steps_replayed": 47,
+    "recovery_s": {
+      "n": 15,
+      "p50": 0.3607676029205322,
+      "p95": 0.3751828670501709,
+      "mean": 0.38
+    },
+    "recovery_samples": [
+      0.7299,
+      0.3617,
+      0.3752,
+      0.3608,
+      0.3586,
+      0.3696,
+      0.3692,
+      0.3331,
+      0.3424,
+      0.3526,
+      0.3322,
+      0.3323,
+      0.3612,
+      0.3472,
+      0.3745
+    ],
+    "duration_s": 13.19,
+    "supervisor": {
+      "status": "finished",
+      "restarts": 15,
+      "elapsed_s": 13.19
+    },
+    "seed": 2
+  },
+  {
+    "mode": "naive",
+    "run": "naive-seed3",
+    "requests": 40,
+    "messages": 46,
+    "completed": 40,
+    "completion_rate": 1.0,
+    "statuses": {
+      "DONE": 30,
+      "REJECTED": 7,
+      "COMPENSATED": 3
+    },
+    "duplicate_effects": 26,
+    "duplicate_by_kind": {
+      "payment": 14,
+      "email": 11,
+      "refund": 1
+    },
+    "requests_with_duplicates": 13,
+    "inconsistent_requests": 12,
+    "compensations": 3,
+    "payments": 47,
+    "refunds": 4,
+    "emails": 47,
+    "faults": {
+      "worker_kills": 10,
+      "crash_points": 4,
+      "service_faults": 16,
+      "llm_faults": 3,
+      "duplicate_deliveries": 6
+    },
+    "crashes": 14,
+    "faults_total": 39,
+    "retries": 17,
+    "idempotent_replays": 0,
+    "duplicates_ignored": 0,
+    "llm_calls": 61,
+    "llm_cache_hits": 0,
+    "steps_replayed": 68,
+    "recovery_s": {
+      "n": 14,
+      "p50": 0.36550402641296387,
+      "p95": 0.3965888023376465,
+      "mean": 0.3661
+    },
+    "recovery_samples": [
+      0.3681,
+      0.3681,
+      0.358,
+      0.4003,
+      0.367,
+      0.3586,
+      0.3837,
+      0.3418,
+      0.3337,
+      0.3655,
+      0.3397,
+      0.3623,
+      0.3818,
+      0.3966
+    ],
+    "duration_s": 13.97,
+    "supervisor": {
+      "status": "finished",
+      "restarts": 14,
+      "elapsed_s": 13.97
+    },
+    "seed": 3
+  },
+  {
+    "mode": "naive",
+    "run": "naive-seed4",
+    "requests": 40,
+    "messages": 46,
+    "completed": 40,
+    "completion_rate": 1.0,
+    "statuses": {
+      "REJECTED": 8,
+      "DONE": 29,
+      "COMPENSATED": 3
+    },
+    "duplicate_effects": 17,
+    "duplicate_by_kind": {
+      "email": 8,
+      "payment": 8,
+      "refund": 1
+    },
+    "requests_with_duplicates": 8,
+    "inconsistent_requests": 6,
+    "compensations": 3,
+    "payments": 40,
+    "refunds": 4,
+    "emails": 44,
+    "faults": {
+      "worker_kills": 5,
+      "crash_points": 9,
+      "service_faults": 19,
+      "llm_faults": 4,
+      "duplicate_deliveries": 6
+    },
+    "crashes": 14,
+    "faults_total": 43,
+    "retries": 20,
+    "idempotent_replays": 0,
+    "duplicates_ignored": 0,
+    "llm_calls": 60,
+    "llm_cache_hits": 0,
+    "steps_replayed": 61,
+    "recovery_s": {
+      "n": 14,
+      "p50": 0.357196569442749,
+      "p95": 0.3892343044281006,
+      "mean": 0.3559
+    },
+    "recovery_samples": [
+      0.362,
+      0.3496,
+      0.3581,
+      0.3892,
+      0.3627,
+      0.3676,
+      0.3215,
+      0.3572,
+      0.4,
+      0.3653,
+      0.3539,
+      0.332,
+      0.3349,
+      0.3285
+    ],
+    "duration_s": 13.4,
+    "supervisor": {
+      "status": "finished",
+      "restarts": 14,
+      "elapsed_s": 13.4
+    },
+    "seed": 4
+  },
+  {
+    "mode": "protected",
+    "run": "protected-seed0",
+    "requests": 40,
+    "messages": 46,
+    "completed": 40,
+    "completion_rate": 1.0,
+    "statuses": {
+      "DONE": 28,
+      "REJECTED": 9,
+      "COMPENSATED": 3
+    },
+    "duplicate_effects": 0,
+    "duplicate_by_kind": {},
+    "requests_with_duplicates": 0,
+    "inconsistent_requests": 0,
+    "compensations": 3,
+    "payments": 31,
+    "refunds": 3,
+    "emails": 36,
+    "faults": {
+      "worker_kills": 4,
+      "crash_points": 4,
+      "service_faults": 13,
+      "llm_faults": 1,
+      "duplicate_deliveries": 6
+    },
+    "crashes": 8,
+    "faults_total": 28,
+    "retries": 13,
+    "idempotent_replays": 6,
+    "duplicates_ignored": 6,
+    "llm_calls": 42,
+    "llm_cache_hits": 0,
+    "steps_replayed": 0,
+    "recovery_s": {
+      "n": 8,
+      "p50": 0.40902161598205566,
+      "p95": 0.42182397842407227,
+      "mean": 0.402
+    },
+    "recovery_samples": [
+      0.4066,
+      0.4218,
+      0.4152,
+      0.4139,
+      0.3517,
+      0.3955,
+      0.4023,
+      0.409
+    ],
+    "duration_s": 9.51,
+    "supervisor": {
+      "status": "finished",
+      "restarts": 8,
+      "elapsed_s": 9.51
+    },
+    "seed": 0
+  },
+  {
+    "mode": "protected",
+    "run": "protected-seed1",
+    "requests": 40,
+    "messages": 46,
+    "completed": 40,
+    "completion_rate": 1.0,
+    "statuses": {
+      "DONE": 28,
+      "COMPENSATED": 3,
+      "REJECTED": 9
+    },
+    "duplicate_effects": 0,
+    "duplicate_by_kind": {},
+    "requests_with_duplicates": 0,
+    "inconsistent_requests": 0,
+    "compensations": 3,
+    "payments": 31,
+    "refunds": 3,
+    "emails": 36,
+    "faults": {
+      "worker_kills": 7,
+      "crash_points": 2,
+      "service_faults": 4,
+      "llm_faults": 3,
+      "duplicate_deliveries": 6
+    },
+    "crashes": 9,
+    "faults_total": 22,
+    "retries": 6,
+    "idempotent_replays": 2,
+    "duplicates_ignored": 6,
+    "llm_calls": 44,
+    "llm_cache_hits": 0,
+    "steps_replayed": 0,
+    "recovery_s": {
+      "n": 9,
+      "p50": 0.4225025177001953,
+      "p95": 0.4500432014465332,
+      "mean": 0.4273
+    },
+    "recovery_samples": [
+      0.4008,
+      0.4171,
+      0.4225,
+      0.4334,
+      0.45,
+      0.4177,
+      0.4185,
+      0.4483,
+      0.4378
+    ],
+    "duration_s": 9.61,
+    "supervisor": {
+      "status": "finished",
+      "restarts": 9,
+      "elapsed_s": 9.61
+    },
+    "seed": 1
+  },
+  {
+    "mode": "protected",
+    "run": "protected-seed2",
+    "requests": 40,
+    "messages": 46,
+    "completed": 40,
+    "completion_rate": 1.0,
+    "statuses": {
+      "DONE": 28,
+      "REJECTED": 9,
+      "COMPENSATED": 3
+    },
+    "duplicate_effects": 0,
+    "duplicate_by_kind": {},
+    "requests_with_duplicates": 0,
+    "inconsistent_requests": 0,
+    "compensations": 3,
+    "payments": 31,
+    "refunds": 3,
+    "emails": 36,
+    "faults": {
+      "worker_kills": 1,
+      "crash_points": 8,
+      "service_faults": 13,
+      "llm_faults": 4,
+      "duplicate_deliveries": 6
+    },
+    "crashes": 9,
+    "faults_total": 32,
+    "retries": 14,
+    "idempotent_replays": 4,
+    "duplicates_ignored": 6,
+    "llm_calls": 43,
+    "llm_cache_hits": 0,
+    "steps_replayed": 0,
+    "recovery_s": {
+      "n": 9,
+      "p50": 0.3991880416870117,
+      "p95": 0.4738647937774658,
+      "mean": 0.3981
+    },
+    "recovery_samples": [
+      0.3194,
+      0.3873,
+      0.4323,
+      0.4739,
+      0.415,
+      0.3734,
+      0.4197,
+      0.3992,
+      0.3629
+    ],
+    "duration_s": 9.78,
+    "supervisor": {
+      "status": "finished",
+      "restarts": 9,
+      "elapsed_s": 9.78
+    },
+    "seed": 2
+  },
+  {
+    "mode": "protected",
+    "run": "protected-seed3",
+    "requests": 40,
+    "messages": 46,
+    "completed": 40,
+    "completion_rate": 1.0,
+    "statuses": {
+      "DONE": 28,
+      "REJECTED": 9,
+      "COMPENSATED": 3
+    },
+    "duplicate_effects": 0,
+    "duplicate_by_kind": {},
+    "requests_with_duplicates": 0,
+    "inconsistent_requests": 0,
+    "compensations": 3,
+    "payments": 31,
+    "refunds": 3,
+    "emails": 36,
+    "faults": {
+      "worker_kills": 5,
+      "crash_points": 7,
+      "service_faults": 10,
+      "llm_faults": 2,
+      "duplicate_deliveries": 6
+    },
+    "crashes": 12,
+    "faults_total": 30,
+    "retries": 11,
+    "idempotent_replays": 7,
+    "duplicates_ignored": 6,
+    "llm_calls": 41,
+    "llm_cache_hits": 0,
+    "steps_replayed": 0,
+    "recovery_s": {
+      "n": 12,
+      "p50": 0.41662073135375977,
+      "p95": 0.4428226947784424,
+      "mean": 0.441
+    },
+    "recovery_samples": [
+      0.3962,
+      0.3516,
+      0.4258,
+      0.8235,
+      0.4166,
+      0.4259,
+      0.3896,
+      0.3978,
+      0.4428,
+      0.3849,
+      0.3988,
+      0.4385
+    ],
+    "duration_s": 10.82,
+    "supervisor": {
+      "status": "finished",
+      "restarts": 12,
+      "elapsed_s": 10.82
+    },
+    "seed": 3
+  },
+  {
+    "mode": "protected",
+    "run": "protected-seed4",
+    "requests": 40,
+    "messages": 46,
+    "completed": 40,
+    "completion_rate": 1.0,
+    "statuses": {
+      "REJECTED": 9,
+      "DONE": 28,
+      "COMPENSATED": 3
+    },
+    "duplicate_effects": 0,
+    "duplicate_by_kind": {},
+    "requests_with_duplicates": 0,
+    "inconsistent_requests": 0,
+    "compensations": 3,
+    "payments": 31,
+    "refunds": 3,
+    "emails": 36,
+    "faults": {
+      "worker_kills": 7,
+      "crash_points": 4,
+      "service_faults": 14,
+      "llm_faults": 3,
+      "duplicate_deliveries": 6
+    },
+    "crashes": 11,
+    "faults_total": 34,
+    "retries": 14,
+    "idempotent_replays": 6,
+    "duplicates_ignored": 6,
+    "llm_calls": 43,
+    "llm_cache_hits": 2,
+    "steps_replayed": 0,
+    "recovery_s": {
+      "n": 11,
+      "p50": 0.39688825607299805,
+      "p95": 0.4776308536529541,
+      "mean": 0.4082
+    },
+    "recovery_samples": [
+      0.4616,
+      0.4006,
+      0.3583,
+      0.3542,
+      0.3684,
+      0.3833,
+      0.3969,
+      0.4569,
+      0.4538,
+      0.4776,
+      0.3788
+    ],
+    "duration_s": 10.34,
+    "supervisor": {
+      "status": "finished",
+      "restarts": 10,
+      "elapsed_s": 10.34
+    },
+    "seed": 4
+  }
+]
