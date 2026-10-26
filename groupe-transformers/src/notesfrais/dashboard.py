@@ -1,11 +1,10 @@
-"""Tableau de bord Streamlit : campagne en direct, kill manuel, ou replay d'une campagne enregistrée.
+"""Tableau de bord Streamlit : campagne en direct et kill manuel du worker.
 
-Lancement : `python -m notesfrais dashboard` (direct) ou `python -m notesfrais replay` (sans rien exécuter).
+Lancement : `python -m notesfrais dashboard`.
 """
 from __future__ import annotations
 
 import html
-import json
 import subprocess
 import sys
 import time
@@ -16,7 +15,7 @@ import streamlit as st
 
 from notesfrais import STEPS
 from notesfrais.chaos import kill_worker
-from notesfrais.config import GROUP_DIR, RESULTS_DIR, RUNS_DIR
+from notesfrais.config import GROUP_DIR, RUNS_DIR
 from notesfrais.journal import Journal
 from notesfrais.snapshot import snapshot
 from notesfrais.supervisor import worker_env
@@ -44,15 +43,6 @@ CSS = """
 .logline { font-family: ui-monospace, Consolas, monospace; font-size: 12px; margin: 0; }
 </style>
 """
-
-
-def parse_args() -> dict:
-    args = sys.argv[1:]
-    out = {"replay": "--replay" in args, "recording": None}
-    if out["replay"]:
-        rest = [a for a in args if a != "--replay"]
-        out["recording"] = rest[0] if rest else None
-    return out
 
 
 def counter(col, label: str, value, tone: str = "") -> None:
@@ -134,7 +124,10 @@ def live_page() -> None:
     if st.sidebar.button("💥 Tuer le worker maintenant", use_container_width=True):
         target = Path(st.session_state.get("run_dir", run_dir))
         pid = kill_worker(target, Journal(target, "dashboard"), "manual_kill")
-        st.sidebar.success(f"worker {pid} tué") if pid else st.sidebar.info("aucun worker en cours")
+        if pid:
+            st.sidebar.success(f"worker {pid} tué")
+        else:
+            st.sidebar.info("aucun worker en cours (campagne terminée ?)")
     st.sidebar.caption("Le superviseur relance le worker ; en mode protégé il reprend à la première étape non terminée.")
 
     @st.fragment(run_every=1.0)
@@ -148,51 +141,11 @@ def live_page() -> None:
     live()
 
 
-def replay_page(default: str | None) -> None:
-    st.sidebar.header("Replay (aucune exécution)")
-    recordings = sorted((RESULTS_DIR / "recordings").glob("*.snapshots.jsonl"))
-    if default:
-        recordings = [Path(default)] + [r for r in recordings if r != Path(default)]
-    if not recordings:
-        st.warning("Aucun enregistrement dans results/recordings : lancez d'abord `python -m notesfrais campaign`.")
-        return
-    choice = st.sidebar.selectbox("Enregistrement", recordings, format_func=lambda p: p.name.replace(".snapshots.jsonl", ""))
-    speed = st.sidebar.slider("Vitesse", 0.5, 10.0, 2.0, 0.5)
-    frames = [json.loads(line) for line in Path(choice).read_text(encoding="utf-8").splitlines() if line.strip()]
-    if st.sidebar.button("▶ Rejouer depuis le début", type="primary", use_container_width=True):
-        st.session_state["replay_start"] = time.time()
-        st.session_state["replay_file"] = str(choice)
-    st.sidebar.caption(f"{len(frames)} instantanés enregistrés pendant la campagne.")
-
-    @st.fragment(run_every=0.5)
-    def play() -> None:
-        if st.session_state.get("replay_file") != str(choice):
-            render(frames[-1])
-            st.caption("État final — cliquez « Rejouer » pour voir le déroulé.")
-            return
-        elapsed = (time.time() - st.session_state["replay_start"]) * speed
-        t0 = frames[0]["t"]
-        frame = frames[0]
-        for f in frames:
-            if f["t"] - t0 <= elapsed:
-                frame = f
-            else:
-                break
-        render(frame)
-        st.caption(f"Replay ×{speed} — t = {frame['t'] - t0:.1f} s / {frames[-1]['t'] - t0:.1f} s")
-
-    play()
-
-
 def main() -> None:
     st.set_page_config(page_title="B5 — Workflow résilient", page_icon="🛡️", layout="wide")
     st.markdown(CSS, unsafe_allow_html=True)
-    opts = parse_args()
     st.title("Notes de frais — workflow résilient et idempotent")
-    if opts["replay"]:
-        replay_page(opts["recording"])
-    else:
-        live_page()
+    live_page()
 
 
 main()

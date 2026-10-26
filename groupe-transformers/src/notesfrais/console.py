@@ -1,4 +1,4 @@
-"""Affichage terminal (couleurs ANSI, y compris sous Windows) partagé par la démo et le replay."""
+"""Affichage terminal de la démo (couleurs ANSI, y compris sous Windows)."""
 from __future__ import annotations
 
 import os

@@ -130,24 +130,18 @@ def cmd_check_llm(args) -> int:
     return 0
 
 
-def _streamlit(extra: list[str]) -> int:
+def _streamlit() -> int:
     import subprocess
     from .config import GROUP_DIR
     app = Path(__file__).with_name("dashboard.py")
-    return subprocess.call([sys.executable, "-m", "streamlit", "run", str(app), "--server.headless=false", "--"] + extra,
+    # toolbarMode=viewer : masque le bouton « Deploy » et le menu développeur de Streamlit.
+    return subprocess.call([sys.executable, "-m", "streamlit", "run", str(app), "--server.headless=false",
+                            "--client.toolbarMode=viewer"],
                            cwd=str(GROUP_DIR))
 
 
 def cmd_dashboard(args) -> int:
-    return _streamlit([])
-
-
-def cmd_replay(args) -> int:
-    if args.terminal:
-        from .replay import replay_terminal
-        return replay_terminal(args.recording, args.speed)
-    extra = ["--replay"] + ([str(args.recording)] if args.recording else [])
-    return _streamlit(extra)
+    return _streamlit()
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -226,12 +220,6 @@ def build_parser() -> argparse.ArgumentParser:
 
     s = sub.add_parser("dashboard", help="tableau de bord Streamlit")
     s.set_defaults(fn=cmd_dashboard)
-
-    s = sub.add_parser("replay", help="rejoue une campagne enregistrée, sans rien exécuter")
-    s.add_argument("recording", nargs="?", type=Path, default=None)
-    s.add_argument("--terminal", action="store_true", help="replay dans le terminal au lieu de Streamlit")
-    s.add_argument("--speed", type=float, default=4.0)
-    s.set_defaults(fn=cmd_replay)
     return p
 
 

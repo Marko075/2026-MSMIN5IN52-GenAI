@@ -1,7 +1,6 @@
 """État observable d'un run, calculé depuis le journal et le registre des effets.
 
-Le même instantané alimente le tableau de bord en direct et le replay (il est enregistré pendant la
-campagne dans `snapshots.jsonl`), ce qui permet de rejouer une démo sans rien exécuter.
+Utilisé par le tableau de bord et par la barre de progression de `python -m demo`.
 """
 from __future__ import annotations
 

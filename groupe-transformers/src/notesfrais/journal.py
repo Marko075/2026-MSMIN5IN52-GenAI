@@ -60,8 +60,6 @@ def read_journal(run_dir: Path) -> list[dict]:
     """Fusionne tous les *.jsonl du run. Une ligne tronquée par un kill est ignorée, pas fatale."""
     events: list[dict] = []
     for path in sorted(Path(run_dir).glob("*.jsonl")):
-        if path.name.startswith("snapshots"):
-            continue
         try:
             with open(path, encoding="utf-8", errors="replace") as fh:
                 for line in fh:

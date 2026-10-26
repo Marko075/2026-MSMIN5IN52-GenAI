@@ -2,17 +2,16 @@
 
 1. 40 notes de frais traitées en mode NAÏF sous chaos : les effets en double apparaissent en rouge.
 2. Les mêmes 40 notes, les mêmes pannes, en mode PROTÉGÉ : 0 doublon.
-3. Comparatif final et rapport HTML.
+3. Tableau comparatif final.
 """
 from __future__ import annotations
 
 import json
-import shutil
 import sys
 import time
 
 from notesfrais.campaign import run_one
-from notesfrais.config import RESULTS_DIR, RUNS_DIR, RunConfig
+from notesfrais.config import RUNS_DIR, RunConfig
 from notesfrais.console import BOLD, DIM, GREEN, RED, RESET, YELLOW, enable_ansi, progress_line
 
 N_REQUESTS = 40
@@ -60,14 +59,10 @@ def main() -> int:
         pad_b = 14 + (len(str(b)) - len(_strip(str(b))))
         print(f"{label:26s}{str(a):>{pad_a}s}{str(b):>{pad_b}s}")
 
-    demo_rec = RESULTS_DIR / "recordings"
-    demo_rec.mkdir(parents=True, exist_ok=True)
-    for mode in ("naive", "protected"):
-        shutil.copy(RUNS_DIR / "demo" / mode / "snapshots.jsonl", demo_rec / f"demo-{mode}.snapshots.jsonl")
-    (RESULTS_DIR / "demo_last.json").write_text(json.dumps({"naive": naive, "protected": protected}, indent=2,
-                                                           ensure_ascii=False), encoding="utf-8")
+    (RUNS_DIR / "demo" / "demo_last.json").write_text(json.dumps({"naive": naive, "protected": protected}, indent=2,
+                                                                 ensure_ascii=False), encoding="utf-8")
     print(f"\n{YELLOW}Durée totale : {time.time() - started:.0f} s{RESET} · "
-          f"replay : python -m notesfrais replay · tableau de bord : python -m notesfrais dashboard")
+          f"tableau de bord : python -m notesfrais dashboard")
     return 0
 
 

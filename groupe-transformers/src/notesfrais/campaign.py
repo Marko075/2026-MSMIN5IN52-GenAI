@@ -42,28 +42,20 @@ def run_one(run_dir: Path, cfg: RunConfig, n_requests: int = 40, dup_rate: float
 
     stop = threading.Event()
 
-    def record() -> None:
-        with open(run_dir / "snapshots.jsonl", "a", encoding="utf-8") as fh:
-            while True:
-                try:
-                    snap = snapshot(run_dir, cfg.mode)
-                    fh.write(json.dumps(snap, ensure_ascii=False) + "\n")
-                    fh.flush()
-                    if on_snapshot is not None:
-                        on_snapshot(snap)
-                except Exception as exc:  # noqa: BLE001 - une lecture ratée ne doit pas arrêter l'enregistrement
-                    with open(run_dir / "recorder_errors.log", "a", encoding="utf-8") as err:
-                        err.write(f"{time.time():.3f} {exc!r}\n")
-                if stop.wait(snapshot_every):
-                    snap = snapshot(run_dir, cfg.mode)
-                    snap["finished"] = True
-                    fh.write(json.dumps(snap, ensure_ascii=False) + "\n")
-                    if on_snapshot is not None:
-                        on_snapshot(snap)
-                    return
+    def progress() -> None:
+        """Transmet l'état courant à `on_snapshot` (barre de progression de la démo)."""
+        while True:
+            try:
+                on_snapshot(snapshot(run_dir, cfg.mode))
+            except Exception:  # noqa: BLE001 - une lecture ratée ne doit pas interrompre l'affichage
+                pass
+            if stop.wait(snapshot_every):
+                on_snapshot(snapshot(run_dir, cfg.mode))
+                return
 
-    recorder = threading.Thread(target=record, daemon=True)
-    recorder.start()
+    reporter = threading.Thread(target=progress, daemon=True) if on_snapshot is not None else None
+    if reporter:
+        reporter.start()
     if chaos:
         chaos.start()
     result = supervisor.run(timeout=timeout)
@@ -71,7 +63,8 @@ def run_one(run_dir: Path, cfg: RunConfig, n_requests: int = 40, dup_rate: float
         chaos.stop()
         chaos.join(timeout=5)
     stop.set()
-    recorder.join(timeout=10)
+    if reporter:
+        reporter.join(timeout=10)
     metrics = compute_metrics(run_dir, cfg.mode)
     metrics["supervisor"] = result
     metrics["seed"] = cfg.seed
@@ -139,9 +132,3 @@ def save_results(runs: list[dict], summary: dict, out_runs: Path, results_dir: P
         writer.writeheader()
         for r in runs:
             writer.writerow({**r, "recovery_p50_s": r["recovery_s"]["p50"], "recovery_p95_s": r["recovery_s"]["p95"]})
-    rec_dir = results_dir / "recordings"
-    rec_dir.mkdir(exist_ok=True)
-    for r in runs:
-        src = out_runs / r["run"] / "snapshots.jsonl"
-        if src.exists():
-            shutil.copy(src, rec_dir / f"{r['run']}.snapshots.jsonl")
