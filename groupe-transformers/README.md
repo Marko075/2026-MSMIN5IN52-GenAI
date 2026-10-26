@@ -1,10 +1,11 @@
 # Nom du projet
 
-## Groupe
+## Groupe 
 
-| Membre | Contribution principale |
-|---|---|
-| À compléter | À compléter |
+Nom du groupe : transformers
+Membre 1 : Nathan KLIEBER
+Membre 2 : Alexandre HUYNH
+Membre 3 : Marko JOVANOVIC
 
 ## Sujet
 
