@@ -47,4 +47,5 @@ outputs/
 # Local tooling
 .mcp.json
 .claude/
+.playwright-mcp/
 /CLAUDE.md

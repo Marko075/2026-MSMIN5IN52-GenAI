@@ -2,13 +2,13 @@
 
 ## 1. Réserver un sujet
 
-Choisissez un sujet du [catalogue](CATALOGUE.md) ou soumettez une proposition libre avant de commencer. Deux groupes ne peuvent pas traiter le même sujet. Une proposition libre doit respecter les mêmes exigences de faisabilité, de mesure et de différenciation que le catalogue.
+Choisissez un sujet du [catalogue](CATALOGUE.md) ou soumettez une proposition libre avant de commencer, puis inscrivez le groupe et ses vœux dans le classeur d'inscription du cours (lien transmis par l'enseignant) : c'est lui qui fait foi pour l'attribution. Deux groupes ne peuvent pas traiter le même sujet. Une proposition libre doit respecter les mêmes exigences de faisabilité, de mesure et de différenciation que le catalogue.
 
 ## 2. Préparer le fork
 
 1. Forkez `jsboigeEPF/2026-MSMIN5IN52-GenAI`.
 2. Clonez votre fork.
-3. Ajoutez le dépôt du cours comme remote `upstream`.
+3. Ajoutez le dépôt du cours comme remote `upstream` : `https://github.com/jsboigeEPF/2026-MSMIN5IN52-GenAI.git`.
 4. Créez une branche de travail.
 5. Créez **un seul** dossier `groupe-<nom-court>` à la racine à partir de [`template-groupe/`](../template-groupe/).
 
@@ -17,10 +17,9 @@ Ne renommez, ne déplacez et ne supprimez aucun fichier appartenant au dépôt o
 ## 3. Travailler progressivement
 
 - Commitez régulièrement avec des messages décrivant le changement.
-- Reliez la PR finale à l'issue de réservation du sujet.
 - Ouvrez une PR brouillon ou publiez un point d'étape assez tôt pour rendre la progression visible.
 - Répartissez les tâches et relisez le code des autres membres.
-- Gardez une baseline simple pour mesurer l'apport du système GenAI.
+- Quand le sujet s'y prête, comparez à une approche plus simple pour montrer l'apport du système GenAI.
 - Testez les modes d'échec : réponse invalide, indisponibilité d'une API, entrée vide, timeout, absence de GPU ou dépassement de budget.
 - Utilisez des données publiques, synthétiques ou dûment autorisées.
 
@@ -36,7 +35,7 @@ groupe-<nom-court>/
 ├── .env.example
 ├── .gitignore
 ├── src/                 # ou application équivalente
-├── tests/
+├── tests/               # si pertinent
 ├── notebooks/           # si pertinent
 └── slides/              # PDF recommandé
 ```
@@ -46,9 +45,9 @@ Le README du groupe doit présenter : membres, sujet, problématique, architectu
 Le projet contient également :
 
 - le code source ;
-- un notebook avec analyses/visualisations **ou** une UI/démo fonctionnelle ;
-- des tests exécutables et leur résultat ;
-- les slides de soutenance ;
+- une UI/démo fonctionnelle **ou** un notebook qui montre le système en action (par exemple une conversation agentique commentée) ;
+- des tests et leur résultat quand le sujet s'y prête : c'est un plus, pas une obligation ;
+- les slides de soutenance, qui peuvent arriver dans une PR complémentaire avant la soutenance ;
 - un `.env.example` ne contenant que les noms des variables.
 
 ## 5. Secrets, données et fichiers lourds
@@ -70,9 +69,13 @@ Si un secret a été commité, révoquez-le immédiatement puis prévenez l'ense
 4. Ouvrez une PR vers `jsboigeEPF/2026-MSMIN5IN52-GenAI:main`.
 5. Remplissez toute la checklist du modèle de PR.
 
+La PR publique identifie les membres uniquement par leurs comptes GitHub (`@pseudo`) ; n'indiquez ni nom civil, ni adresse e-mail, ni numéro étudiant.
+
 La PR est obligatoire : un lien vers un dépôt externe, un fichier envoyé séparément ou un push direct ne constitue pas une remise.
 
-**Date limite : lundi 19 octobre 2026 à 23:59.**
+**Date limite : lundi 26 octobre 2026 à 23:59.**
+
+La PR n'a pas besoin d'être parfaite à cette date : elle se met à jour à chaque push. Les slides et d'éventuelles corrections peuvent suivre dans une PR complémentaire ; envoyez-la assez tôt pour qu'elle puisse être intégrée avant la soutenance.
 
 ## 7. Préparer la soutenance
 

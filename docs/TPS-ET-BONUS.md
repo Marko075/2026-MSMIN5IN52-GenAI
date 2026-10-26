@@ -1,6 +1,6 @@
 # TPs dans CoursIA et bonus
 
-Le module comprend **deux TPs**. Chaque TP prend la forme d'une contribution au dépôt public [`jsboige/CoursIA`](https://github.com/jsboige/CoursIA) : vous choisissez un notebook autorisé, corrigez ses exercices ouverts, vérifiez son exécution puis proposez votre travail par Pull Request.
+Le module comprend **deux TPs**, réalisés **par groupe**. Chaque TP prend la forme d'une contribution du groupe au dépôt public [`jsboige/CoursIA`](https://github.com/jsboige/CoursIA) : votre groupe choisit un notebook autorisé, corrige ses exercices ouverts, vérifie son exécution puis propose son travail par Pull Request.
 
 ## Barème du bonus
 
@@ -22,7 +22,7 @@ CoursIA distingue :
 - un **exercice ouvert**, matérialisé par une cellule à compléter (`pass`, `return None`, `TODO`, résultat manquant ou équivalent) ;
 - une **correction**, qui remplace ce travail ouvert par une solution fonctionnelle, expliquée et vérifiée.
 
-Modifier un exemple déjà résolu, recopier une solution existante ou seulement retirer un marqueur `TODO` ne constitue pas une correction. Si deux étudiants proposent le même exercice, seule une contribution originale et attribuable peut être comptée.
+Modifier un exemple déjà résolu, recopier une solution existante ou seulement retirer un marqueur `TODO` ne constitue pas une correction. Si deux groupes proposent le même exercice, seule une contribution originale et attribuable peut être comptée.
 
 ## Déroulement d'un TP
 

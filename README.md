@@ -6,16 +6,16 @@ Dépôt de projets du cours **MSMIN5IN52 — IA générative et chatbots**, grou
 
 | Étape | Date |
 |---|---|
-| Première séance | Mercredi 9 septembre 2026, 08:30–12:15 |
-| Dépôt de la Pull Request finale | **Lundi 19 octobre 2026 à 23:59** |
-| Soutenance et démonstration | **Mercredi 21 octobre 2026** |
+| Première séance | Mercredi 16 septembre 2026, 08:30–12:15 |
+| Dépôt de la Pull Request finale | **Lundi 26 octobre 2026 à 23:59** |
+| Soutenance et démonstration | **Mercredi 28 octobre 2026, de 13:15 à 17:00, salle A202** |
 
 Le cours comporte six séances. Le projet est réalisé progressivement et doit rester démontrable tout au long du module.
 
 ## Démarrage rapide
 
 1. Constituez un groupe — **3 personnes est le format standard**.
-2. Choisissez un sujet dans le [catalogue 2026](docs/CATALOGUE.md), puis [réservez-le par une issue](https://github.com/jsboigeEPF/2026-MSMIN5IN52-GenAI/issues/new?template=inscription-groupe.yml). Un sujet ne peut être réservé que par un groupe.
+2. Choisissez un sujet dans le [catalogue 2026](docs/CATALOGUE.md), puis inscrivez le groupe et ses vœux dans le **classeur d'inscription** du cours (lien transmis par l'enseignant). Un sujet n'est attribué qu'à un groupe ; le classeur fait foi.
 3. Forkez ce dépôt sur le compte d'un membre du groupe.
 4. Créez un dossier unique à la racine, nommé `groupe-<nom-court>`.
 5. Copiez le contenu de [`template-groupe/`](template-groupe/) dans ce dossier.
@@ -28,7 +28,7 @@ Les sujets libres sont possibles, mais doivent être proposés avec le [formulai
 ## Deux circuits de contribution distincts
 
 - **Projet fil rouge** : le groupe développe son démonstrateur dans son fork de **ce dépôt**, puis ouvre une PR vers [`jsboigeEPF/2026-MSMIN5IN52-GenAI:main`](https://github.com/jsboigeEPF/2026-MSMIN5IN52-GenAI/pulls). Cette PR collective porte le projet évalué en soutenance.
-- **TPs individuels** : chaque étudiant corrige des exercices dans un notebook du dépôt [`jsboige/CoursIA`](https://github.com/jsboige/CoursIA), puis ouvre une PR distincte vers `jsboige/CoursIA:main`. Ces contributions ne vont ni dans le dossier du groupe ni dans la PR du projet ; leur barème est décrit dans [TPs dans CoursIA et bonus](docs/TPS-ET-BONUS.md).
+- **TPs par groupe** : le groupe corrige des exercices dans un notebook du dépôt [`jsboige/CoursIA`](https://github.com/jsboige/CoursIA), puis ouvre une PR distincte vers `jsboige/CoursIA:main`. Ces contributions ne vont ni dans le dossier du groupe ni dans la PR du projet ; leur barème est décrit dans [TPs dans CoursIA et bonus](docs/TPS-ET-BONUS.md).
 
 ## Documents de référence
 
@@ -62,9 +62,9 @@ Chaque groupe fournit au minimum :
 
 - le code source et des instructions reproductibles ;
 - un `README.md` complet ;
-- un notebook explicatif avec analyses et visualisations **ou** une interface/démonstration fonctionnelle ;
-- des tests adaptés au projet ;
-- les slides de soutenance ;
+- une interface/démonstration fonctionnelle **ou** un notebook explicatif qui montre le système en action ;
+- des tests quand le sujet s'y prête (un plus, pas une obligation) ;
+- les slides de soutenance (elles peuvent suivre dans une PR complémentaire) ;
 - un fichier `.env.example` sans valeur secrète ;
 - un historique Git montrant la participation des membres.
 

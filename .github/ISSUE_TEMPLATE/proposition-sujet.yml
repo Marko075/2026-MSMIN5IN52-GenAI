@@ -38,7 +38,7 @@ body:
   - type: textarea
     id: mvp
     attributes:
-      label: MVP démontrable le 21 octobre 2026
+      label: MVP démontrable le 28 octobre 2026
     validations:
       required: true
   - type: textarea
