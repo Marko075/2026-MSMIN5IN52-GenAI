@@ -4,9 +4,9 @@
 
 | Membre | Contribution principale |
 |---|---|
-| @nathan138 | à compléter |
-| @Marko075 | à compléter |
-| @Neyhala | à compléter |
+| @nathan138 | persistance SQLite, clés d'idempotence, compensation, superviseur et chaos, baseline naïve, campagne de pannes et métriques, intégration et PR,demo |
+| @Marko075 |fork et dossier de groupe, scénario et données synthétiques, extraction LLM (Semantic Kernel / OpenRouter), règles de contrôle, vrai LLM, tests automatiques  |
+| @Neyhala | : tableau de bord Streamlit , démo terminal, rapport et notebook d'analyse, slides, préparation de la soutenance |
 
 ## Sujet
 
