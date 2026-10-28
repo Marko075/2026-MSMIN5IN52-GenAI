@@ -2,11 +2,11 @@
 
 ## Groupe
 
-| Membre | Contribution principale |
-|---|---|
-| @nathan138 | persistance SQLite, clés d'idempotence, compensation, superviseur et chaos, baseline naïve, campagne de pannes et métriques, intégration et PR,demo |
-| @Marko075 |fork et dossier de groupe, scénario et données synthétiques, extraction LLM (Semantic Kernel / OpenRouter), règles de contrôle, vrai LLM, tests automatiques  |
-| @Neyhala | : tableau de bord Streamlit , démo terminal, rapport et notebook d'analyse, slides, préparation de la soutenance |
+- @nathan138
+- @Marko075
+- @Neyhala
+
+Slides de la soutenance : [slides/presentation-B5.pdf](slides/presentation-B5.pdf).
 
 ## Sujet
 
@@ -141,9 +141,11 @@ appel. Détails : [results/report.html](results/report.html) et [notebooks/analy
 
 ## Répartition du travail
 
-À compléter par le groupe (contribution de chaque membre et mode de collaboration).
-
-Le code a été produit avec l'assistance de Claude Code (Anthropic), piloté et relu par le groupe.
+| Membre | Contribution principale |
+|---|---|
+| @nathan138 | persistance SQLite, clés d'idempotence, compensation, superviseur et chaos, baseline naïve, campagne de pannes et métriques, intégration et PR, démo |
+| @Marko075 | fork et dossier de groupe, scénario et données synthétiques, extraction LLM (Semantic Kernel / OpenRouter), règles de contrôle, vrai LLM, tests automatiques |
+| @Neyhala | tableau de bord Streamlit, démo terminal, rapport et notebook d'analyse, slides, préparation de la soutenance |
 
 ## Licence et références
 
